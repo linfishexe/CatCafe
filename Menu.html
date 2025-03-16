@@ -6,17 +6,23 @@
     <title>貓老闆菜單</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CatCafe_index_style.css">
+    <script defer src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            hamburger.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
     <style>
-        body {
-            background-color: #f8f5f0;
-            font-family: 'Noto Sans TC', sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
         .menu-container {
+            text-align: center;
             max-width: 800px;
-            margin: auto;
+            margin: 10px auto;
             padding: 20px;
             background: white;
             border-radius: 20px;
@@ -38,7 +44,7 @@
             list-style: none;
             padding: 0;
         }
-        li {
+        .menu-container>ul>li {
             background: #f3e7db;
             margin: 10px;
             padding: 10px;
@@ -84,6 +90,15 @@
     </style>
 </head>
 <body>
+    <header>
+        <a href="./CatCafe_index.html"><div class="logo"><img src="./貓老闆LOGO.png" alt="貓老闆LOGO">貓老闆咖啡</div></a>
+        <button class="hamburger">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./CatCafe_index.html">首頁</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="menu-container">
         <h1>🐱 貓老闆 MENU 🐱</h1>
         
@@ -128,5 +143,9 @@
             <li>太妃拿鐵 <br><span class="english">Toffee Latte</span> <span class="price">$170</span></li>
         </ul>
     </div>
+    <footer>
+        <p>聯繫我們：地址 | 電話 | 社交媒體</p>
+        <small>Copyright © 2025 CAT CAFE. All Rights Reserved</small>
+    </footer>
 </body>
 </html>

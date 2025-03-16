@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
 }
-body {
+html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f1e4;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -14,16 +15,21 @@ header {
     align-items: center;
     padding: 15px 20px;
     background-color: #f8f1e4;
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
+    a{
+        text-decoration: none;
+        color: #322a23;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
         img{
             width: 90px;
             height: 60px;
         }
     }
+    }
+
     .nav-menu ul {
         list-style: none;
         display: flex;
